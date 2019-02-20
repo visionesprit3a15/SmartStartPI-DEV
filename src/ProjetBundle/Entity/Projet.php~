@@ -1,0 +1,70 @@
+<?php
+
+namespace ProjetBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Projet
+ *
+ * @ORM\Table(name="projet", indexes={@ORM\Index(name="idEntreprise", columns={"idEntreprise"})})
+ * @ORM\Entity
+ */
+class Projet
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="domaine", type="string", length=255, nullable=false)
+     */
+    private $domaine;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="budget", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $budget;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="delai", type="string", length=255, nullable=false)
+     */
+    private $delai;
+
+    /**
+     * @var \FosUser
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idEntreprise", referencedColumnName="id")
+     * })
+     */
+    private $identreprise;
+}
+
+

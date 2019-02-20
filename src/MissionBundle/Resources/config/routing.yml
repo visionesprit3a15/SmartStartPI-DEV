@@ -3,13 +3,13 @@ mission_homepage:
     defaults: { _controller: MissionBundle:Default:index }
 mission_index:
     path:     /index
-    defaults: { _controller: "MissionBundle:Mission:index" }
+    defaults: { _controller: MissionBundle:Mission:index }
     methods:  GET
-
 mission_show:
     path:     /{id}/show
     defaults: { _controller: "MissionBundle:Mission:show" }
     methods:  GET
+
 mission_create:
     path:     /create
     defaults: { _controller: "MissionBundle:Mission:create" }
@@ -21,6 +21,7 @@ mission_update:
 mission_delete:
     path:     /delete/{id}
     defaults: { _controller: "MissionBundle:Mission:delete" }
+
 rechercheMission:
     path:     /recherchenom
     defaults: { _controller: "MissionBundle:Mission:rechercheParNom"}

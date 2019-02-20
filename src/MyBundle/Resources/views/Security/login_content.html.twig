@@ -84,19 +84,11 @@
             </a>
         </div>
         <div class="login_message">
-            <p>Don’t have an account ? <a href="#"> Register Now </a> </p>
+            <p>Don’t have an account ? <a href="{{ path('fos_user_registration_register') }}">{{ 'Register now'|trans({}, 'FOSUserBundle') }}</a> </p>
         </div>
     </div>
     <p>In case you are using a public/shared computer we recommend that
         you logout to prevent any un-authorized access to your account</p>
     <!-- /.login_wrapper-->
-
-
-
-
-
-
-
-
 
 </form>

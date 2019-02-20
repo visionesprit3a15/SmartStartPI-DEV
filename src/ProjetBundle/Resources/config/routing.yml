@@ -1,0 +1,3 @@
+projet_homepage:
+    path:     /
+    defaults: { _controller: ProjetBundle:Default:index }

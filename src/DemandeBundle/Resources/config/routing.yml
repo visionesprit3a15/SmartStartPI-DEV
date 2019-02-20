@@ -1,0 +1,28 @@
+demande_homepage:
+    path:     /
+    defaults: { _controller: DemandeBundle:Default:index }
+
+demande_affiche:
+    path:     /affiche
+    defaults: { _controller: DemandeBundle:Demande:affiche }
+
+demande_recherche:
+    path:     /Recherche
+    defaults: { _controller: DemandeBundle:Demande:Recherche }
+
+demande_mesdemandes:
+    path:     /mesdemandes
+    defaults: { _controller: DemandeBundle:Demande:mesdemandes }
+
+demande_show:
+    path:     /{id}/show
+    defaults: { _controller: DemandeBundle:Demande:show }
+
+demande_postuler:
+    path:     /{id}/postuler
+    defaults: { _controller: DemandeBundle:Demande:postuler }
+
+demande_delete:
+    path:     /delete/{id}
+    defaults: { _controller: "DemandeBundle:Demande:delete" }
+
