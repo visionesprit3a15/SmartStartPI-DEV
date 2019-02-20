@@ -1,0 +1,38 @@
+{% extends 'challengeAdd.html.twig' %}
+{% block content %}
+<html>
+<head>
+    <title>Liste des challenges</title>
+</head>
+<body>
+<center>
+    <div class="container">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr><th>nom</th> <th>description</th><th>date</th><th>email</th><th>phone</th><th>specialite</th></tr>
+        </thead>
+<tbody>
+        {% for v in challenges %}
+            <tr>
+                <td> {{ v.nom }}</td>
+                <td> {{ v.description }}</td>
+                <td> {{ v.date|date }}</td>
+                <td> {{ v.email }}</td>
+                <td> {{ v.phone }}</td>
+                <td> {{ v.specialite }}</td>
+                <td> <a href="{{ path("create_question") }}" class="btn btn-primary"> post a question</a></td>
+                <td> <a href=" {{ path("update",{'id':v.id}) }}" class="btn btn-success"> Modifier</a></td>
+                <td> <a href=" {{ path("delete",{'id':v.id}) }}" class="btn btn-danger"> Supprimer</a></td>
+
+
+            </tr>
+        {% endfor %}
+</tbody>
+    </table>
+    </div>
+</center>
+
+</body>
+
+</html>
+{%  endblock %}

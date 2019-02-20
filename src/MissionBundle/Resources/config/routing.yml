@@ -1,0 +1,45 @@
+mission_homepage:
+    path:     /
+    defaults: { _controller: MissionBundle:Default:index }
+mission_index:
+    path:     /index
+    defaults: { _controller: "MissionBundle:Mission:index" }
+    methods:  GET
+
+mission_show:
+    path:     /{id}/show
+    defaults: { _controller: "MissionBundle:Mission:show" }
+    methods:  GET
+mission_create:
+    path:     /create
+    defaults: { _controller: "MissionBundle:Mission:create" }
+
+mission_update:
+    path:     /update/{id}
+    defaults: { _controller: "MissionBundle:Mission:update" }
+
+mission_delete:
+    path:     /delete/{id}
+    defaults: { _controller: "MissionBundle:Mission:delete" }
+rechercheMission:
+    path:     /recherchenom
+    defaults: { _controller: "MissionBundle:Mission:rechercheParNom"}
+
+
+
+
+ajout:
+    path:     /ajout
+    defaults: { _controller: MissionBundle:Categorie:ajout }
+
+delete:
+    path:     /delete
+    defaults: { _controller: MissionBundle:Categorie:delete }
+
+update:
+    path:     /update
+    defaults: { _controller: MissionBundle:Categorie:update }
+
+show:
+    path:     /show
+    defaults: { _controller: MissionBundle:Categorie:show }

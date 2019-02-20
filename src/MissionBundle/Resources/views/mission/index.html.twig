@@ -1,0 +1,58 @@
+{% extends 'baseFront.html.twig' %}
+
+
+    {% block content %}
+
+        {% for mission in missions %}
+
+            <tr>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+                    <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
+                        <div class="jp_job_post_main_wrapper jp_job_post_grid_main_wrapper">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="jp_job_post_side_img">
+                                        <img src="{{ asset('bundles/images/content/job_post_img1.jpg') }}" alt="post_img" />
+                                    </div>
+                                    <div class="jp_job_post_right_cont jp_job_post_grid_right_cont">
+
+                                        <h4>{{ mission.nom }}</h4> <br>
+                                        <ul>
+                                            <li><i class="fa fa-cc-paypal" ></i>&nbsp;Salary {{ mission.Prix }}</li><br>
+                                            <li><i class="fa fa-map-marker"></i>&nbsp;Accomodation {{ mission.hebergement }}</li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-car">   Transport {{ mission.transport }}</i></a></li><br>
+                                            <li><a href="#"><i class="far fa-clock	"> Duration {{ mission.duree }}</i></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="jp_job_post_right_btn_wrapper jp_job_post_grid_right_btn_wrapper">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                            <li><a  href="{{ path('mission_update', { 'id': mission.id }) }}" > Update</a></li>
+                                            <li><a href="{{ path('mission_delete', { 'id': mission.id }) }}">Delete</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp_job_post_keyword_wrapper">
+                            <ul>
+                                <li><i class="fas fa-user-friends"></i> Number of people required {{ mission.nombrepersonne }}</li>
+                                <li><a href="#"> ,Category {{ mission.categorie.nom }}</a></li>
+                                <li><a href="{{ path('mission_show', { 'id': mission.id }) }}">Show More </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+
+
+    {% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'primary/mission_description.html.twig' %}
+{% block content %}
+
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+    <div class="jp_cp_right_side_wrapper">
+    <div class="jp_cp_right_side_inner_wrapper">
+        <h2>Mission DETAILS</h2>
+        <table>
+            <tbody>
+            <tr>
+                <td class="td-w25">ID</td>
+                <td class="td-w10">:</td>
+                <td class="td-w65">{{ mission.id }}</td>
+            </tr>
+            <tr>
+                <td class="td-w25">Duration</td>
+                <td class="td-w10">:</td>
+                <td class="td-w65">{{ mission.duree }}</td>
+            </tr>
+            <tr>
+                <td class="td-w25">Accomondation</td>
+                <td class="td-w10">:</td>
+                <td class="td-w65">{{ mission.hebergement }}</td>
+            </tr>
+            <tr>
+                <td class="td-w25">Transport</td>
+                <td class="td-w10">:</td>
+                <td class="td-w65">{{ mission.transport }}</td>
+            </tr>
+            <tr>
+                <td class="td-w25">Number of person required </td>
+                <td class="td-w10">:</td>
+                <td class="td-w65">{{ mission.nombrepersonne }}</td>
+            </tr>
+            <tr>
+                <td class="td-w25">Salary</td>
+                <td class="td-w10">:</td>
+                <td class="td-w65">{{ mission.prix }}</td>
+            </tr>
+            <tr>
+                <ul>
+                    <li>
+                        <br>
+
+                        <a href="{{ path('mission_index') }}">Back to the list</a>
+                    </li>
+                </ul>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

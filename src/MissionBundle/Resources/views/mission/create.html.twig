@@ -1,0 +1,113 @@
+{% extends 'primary/mission_add.html.twig' %}
+
+
+
+    {% block content %}
+
+<!-- jp ad post Wrapper Start -->
+
+            {{ form_start(form, {'method': 'post', 'action': path('mission_create') }) }}
+
+<div class="jp_adp_main_section_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="jp_adp_form_heading_wrapper">
+                    <h2>Mission Details</h2>
+                </div>
+
+                <div class="jp_adp_form_wrapper"  >
+                    <a> {{ form_row(form.nom) }}</a>
+                </div>
+
+                <div class="jp_adp_form_wrapper">
+                    {{ form_row(form.duree) }}
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                        <div class="jp_adp_form_wrapper">
+                            {{ form_row(form.prix) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                            <div class="jp_adp_form_wrapper" id="pl" >
+
+                                {{ form_row(form.hebergement) }}
+                            </div>
+                        </div>
+                </div>
+                <!--------------
+                        <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                            <div class="jp_adp_form_wrapper" >
+                                     form_row(form.deshebergement) }}
+                            </div>
+                        </div>----------------------->
+                </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bottom_line_Wrapper">
+                <div class="jp_adp_form_heading_wrapper">
+                    <p>Fields with * are mandetory</p>
+                </div>
+                <div class="jp_adp_form_wrapper">
+                    {{ form_row(form.nombrepersonne) }}
+                </div>
+
+                <div class="jp_adp_form_wrapper">
+                    {{ form_row(form.categorie) }}
+                </div>
+                <div class="jp_adp_form_wrapper">
+                    <input type="text" placeholder="Others">
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                        <div class="jp_adp_form_wrapper" id="pl2">
+                            {{ form_row(form.transport) }}
+                        </div>
+                    </div>
+                </div>
+                    <!--------------
+                    <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                        <div class="jp_adp_form_wrapper"  >
+                           desTransport
+                        </div>
+                    </div>--------------------->
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="jp_adp_textarea_main_wrapper">
+                    <textarea rows="7" placeholder="Mission Description" ></textarea>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="jp_adp_choose_resume_bottom_btn_post">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-plus-circle"><input type="submit" value="Publier La mission"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="jp_adp_choose_resume">
+                    <p>Company Post</p>
+                    <div class="custom-input">
+                        <span><i class="fa fa-upload"></i> &nbsp;Upload Mission Post</span>
+                        <input type="file" name="resume" id="resume" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+            {{ form_end(form) }}
+
+        <!-- jp ad post Wrapper End -->
+
+<script src="{{asset("JS/jquery.js") }}"></script>
+<script>
+
+</script>
+{% endblock %}

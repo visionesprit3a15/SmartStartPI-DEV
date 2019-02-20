@@ -1,0 +1,47 @@
+<html>
+
+<head></head>
+<body>
+<center>
+    <form>
+        <fieldset style="width: 20%">
+            <legend>Chercher par Nom</legend>
+         <input type="text" name="nom" id="cle">
+
+        </fieldset>
+    </form>
+    <table id="t" border="2">
+        <tr> <td> id</td><td> nom</td></tr>
+    </table>
+</center>
+<script src="{{ asset('JS/jquery.js') }}"></script>
+<script>
+    $('#cle').keyup(function () {
+        var input =$('#cle').val();
+        $.ajax({
+            url:"{{ path('rechercheMission') }}",
+            type:'GET',
+            data:{'nom':input},
+            success:function (data) {
+                console.log(data);
+                $.each(data,function(i,ele)
+                    {
+                        $('#t').append(
+                        "<tr>"+
+                        "<td>"+ele.id+"</td>"+
+                        "<td>"+ele.nom+"</td>"+
+
+                         "</tr>"
+                        )
+                    })
+            }
+        });
+    }
+    );
+</script>
+</body>
+
+
+
+
+</html>

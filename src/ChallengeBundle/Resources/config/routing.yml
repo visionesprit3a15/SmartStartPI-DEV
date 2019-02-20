@@ -1,0 +1,39 @@
+challenge_homepage:
+    path:     /
+    defaults: { _controller: ChallengeBundle:Default:index }
+
+create:
+    path:     /create
+    defaults: { _controller: ChallengeBundle:Challenge:create }
+
+read:
+    path:     /read
+    defaults: { _controller: ChallengeBundle:Challenge:read }
+
+update:
+    path:     /update/{id}
+    defaults: { _controller: ChallengeBundle:Challenge:update }
+
+delete:
+    path:     /delete/{id}
+    defaults: { _controller: ChallengeBundle:Challenge:delete }
+
+create_question:
+    path:     /create_question
+    defaults: { _controller: ChallengeBundle:Question:create }
+
+read_question:
+    path:     /read_question
+    defaults: { _controller: ChallengeBundle:Question:read }
+
+update_question:
+    path:     /update_question/{id}
+    defaults: { _controller: ChallengeBundle:Question:update }
+
+delete_question:
+    path:     /delete_question/{id}
+    defaults: { _controller: ChallengeBundle:Question:delete }
+
+rechercheChallenge:
+    path:     /rechercheChallenge
+    defaults: { _controller: ChallengeBundle:Challenge:rechercheChallenge }
