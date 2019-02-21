@@ -49,8 +49,7 @@ class DemandeController extends Controller
 
     public function postulerAction(Request $request,Mission $mission)
     {
-        if($mission->getNombrepersonne()<0)
-        {
+
             $demande = new Demande();
             $form = $this->createForm(DemandeType::class, $demande);
             $form = $form->handleRequest($request);
@@ -61,7 +60,8 @@ class DemandeController extends Controller
                 $em->flush();
                 return $this->redirectToRoute('demande_mesdemandes');
             }
-        }
+
+
 
         return $this->render('@Demande/demande/postuler.html.twig', array(
             'form'=>$form->createView()
