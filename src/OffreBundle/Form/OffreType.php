@@ -13,7 +13,9 @@ class OffreType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('description')->add('prix')->add('idprojet')->add('idfreelancer');
+        $builder->add('description')
+            ->add('prix')
+            ->add('idfreelancer');
     }/**
      * {@inheritdoc}
      */

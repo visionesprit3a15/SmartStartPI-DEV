@@ -119,11 +119,11 @@ class Offre
     /**
      * Set idprojet
      *
-     * @param \OffreBundle\Entity\Projet $idprojet
+     * @param \ProjetBundle\Entity\Projet $idprojet
      *
      * @return Offre
      */
-    public function setIdprojet(\OffreBundle\Entity\Projet $idprojet = null)
+    public function setIdprojet(\ProjetBundle\Entity\Projet $idprojet = null)
     {
         $this->idprojet = $idprojet;
 
@@ -133,7 +133,7 @@ class Offre
     /**
      * Get idprojet
      *
-     * @return \OffreBundle\Entity\Projet
+     * @return \ProjetBundle\Entity\Projet
      */
     public function getIdprojet()
     {

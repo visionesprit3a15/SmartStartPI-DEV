@@ -1,7 +1,53 @@
-{% extends "::base.html.twig" %}
+{% extends 'primary/mission_add.html.twig' %}
 
-{% block title %}OffreBundle:Offre:postuler{% endblock %}
-
-{% block body %}
-<h1>Welcome to the Offre:postuler page</h1>
+{% block content_mission %}
 {% endblock %}
+
+
+
+    {% block content %}
+
+        <!-- jp ad post Wrapper Start -->
+
+        {{ form_start(form) }}
+
+        <div class="jp_adp_main_section_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="jp_adp_form_heading_wrapper">
+                            <h2>Postuler</h2>
+                        </div>
+
+                        <div class="jp_adp_form_wrapper"  >
+                            {{ form_row(form.description) }}
+                        </div>
+
+                        <div class="jp_adp_form_wrapper">
+                            {{ form_row(form.prix) }}
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                                <div class="jp_adp_form_wrapper">
+                                    {{ form_row(form.idfreelancer) }}<br>
+                                    <input type="submit" value="Postuler">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+
+        <!-- jp ad post Wrapper End -->
+
+        <script src="{{asset("JS/jquery.js") }}"></script>
+        <script>
+
+        </script>
+    {% endblock %}

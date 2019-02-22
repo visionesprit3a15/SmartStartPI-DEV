@@ -1,7 +1,58 @@
-{% extends "::base.html.twig" %}
+{% extends 'baseFront.html.twig' %}
+    {% block content %}
 
-{% block title %}OffreBundle:Offre:affiche{% endblock %}
+        {% for projet in projets %}
 
-{% block body %}
-<h1>Welcome to the Offre:affiche page</h1>
-{% endblock %}
+            <tr>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+                <div class="jp_job_post_main_wrapper_cont jp_job_post_grid_main_wrapper_cont">
+                    <div class="jp_job_post_main_wrapper jp_job_post_grid_main_wrapper">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="jp_job_post_side_img">
+                                    <img src="{{ asset('bundles/images/content/job_post_img1.jpg') }}" alt="post_img" />
+                                </div>
+                                <div class="jp_job_post_right_cont jp_job_post_grid_right_cont">
+
+                                    <h4>{{ projet.nom }}</h4> <br>
+                                    <ul>
+                                        <li><i class="fa fa-dollar" ></i> Budget {{ projet.budget }}</li><br>
+                                        <li><i class="fa fa-book">Domaine {{ projet.domaine }}</i></li><br>
+                                        <li><i class="fa fa-calendar"> Delai {{ projet.delai }}</i></li>
+                                    </ul>
+                                    <ul>
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="jp_job_post_right_btn_wrapper jp_job_post_grid_right_btn_wrapper">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                        <li><a href="{{ path('offre_show', { 'id': projet.id }) }}">show</a></li>
+                                       <li><a href="{{ path('offre_postuler', { 'id': projet.id }) }}">Apply</a></li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jp_job_post_keyword_wrapper">
+                        <ul>
+                            <li><i class="fas fa-user-friends"></i> Description : {{ projet.description }}</li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+
+
+    {% endblock %}

@@ -199,11 +199,11 @@ class Projet
     /**
      * Set identreprise
      *
-     * @param \ProjetBundle\Entity\User $identreprise
+     * @param \MyBundle\Entity\User $identreprise
      *
      * @return Projet
      */
-    public function setIdentreprise(\ProjetBundle\Entity\User $identreprise = null)
+    public function setIdentreprise(\MyBundle\Entity\User $identreprise = null)
     {
         $this->identreprise = $identreprise;
 
@@ -213,7 +213,7 @@ class Projet
     /**
      * Get identreprise
      *
-     * @return \ProjetBundle\Entity\User
+     * @return \MyBundle\Entity\User
      */
     public function getIdentreprise()
     {

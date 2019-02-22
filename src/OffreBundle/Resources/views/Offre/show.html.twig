@@ -1,7 +1,35 @@
-{% extends "::base.html.twig" %}
 
-{% block title %}OffreBundle:Offre:show{% endblock %}
+<h1>Projet</h1>
 
-{% block body %}
-<h1>Welcome to the Offre:show page</h1>
-{% endblock %}
+<table>
+    <tbody>
+    <tr>
+        <th>Id</th>
+        <td>{{ projet.id }}</td>
+    </tr>
+    <tr>
+        <th>Duree</th>
+        <td>{{ projet.nom }}</td>
+    </tr>
+    <tr>
+        <th>Hebergement</th>
+        <td>{{ projet.description }}</td>
+    </tr>
+    <tr>
+        <th>Prix</th>
+        <td>{{ projet.budget }}</td>
+    </tr>
+    <tr>
+        <th>Transport</th>
+        <td>{{ projet.delai }}</td>
+    </tr>
+
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('offre_affiche') }}">Back to the list</a>
+    </li>
+</ul>
+
