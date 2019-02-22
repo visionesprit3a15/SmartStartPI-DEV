@@ -143,11 +143,11 @@ class Offre
     /**
      * Set idfreelancer
      *
-     * @param \OffreBundle\Entity\User $idfreelancer
+     * @param \MyBundle\Entity\User $idfreelancer
      *
      * @return Offre
      */
-    public function setIdfreelancer(\OffreBundle\Entity\User $idfreelancer = null)
+    public function setIdfreelancer(\MyBundle\Entity\User $idfreelancer = null)
     {
         $this->idfreelancer = $idfreelancer;
 
@@ -157,7 +157,7 @@ class Offre
     /**
      * Get idfreelancer
      *
-     * @return \OffreBundle\Entity\User
+     * @return \MyBundle\Entity\User
      */
     public function getIdfreelancer()
     {
