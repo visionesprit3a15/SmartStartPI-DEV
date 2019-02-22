@@ -55,8 +55,11 @@
 
                                     <td class="cell100 column1">{{ offre.idprojet.nom }}</td>
                                     <td class="cell100 column2">{{ offre.prix }}</td>
-                                    <td class="cell100 column3">{{ offre.idprojet.domaine}}</td>
-                                    <td class="cell100 column4"><a href="{{ path('offre_delete', { 'id':offre.id }) }}">delete</a></td>
+                                    <td class="cell100 column3">{{ offre.description    }}</td>
+                                    <td class="cell100 column4">
+                                        <a href="{{ path('offre_delete', { 'id':offre.id }) }}">delete</a>
+                                        <a  href="{{ path('offre_update', { 'id': offre.id }) }}" > Update</a>
+                                    </td>
                                     <td class="cell100 column5">{{ offre.idprojet.delai}} années</td>
                                 </tr>
                             {% endfor %}

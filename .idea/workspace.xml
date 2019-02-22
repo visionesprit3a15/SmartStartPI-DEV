@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b63c42bc-1fd0-4c46-b2fd-b4436b9dacfd" name="Default Changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/update.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/update.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeBundle/Controller/DemandeController.php" afterPath="$PROJECT_DIR$/src/DemandeBundle/Controller/DemandeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/DemandeBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/mesdemandes.html.twig" afterPath="$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/mesdemandes.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OffreBundle/Controller/OffreController.php" afterPath="$PROJECT_DIR$/src/OffreBundle/Controller/OffreController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OffreBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OffreBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/mesoffres.html.twig" afterPath="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/mesoffres.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -112,43 +112,53 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="update.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/update.html.twig">
+      <file leaf-file-name="OffreController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OffreBundle/Controller/OffreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="36" column="65" lean-forward="false" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+            <state relative-caret-position="288">
+              <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#42#71#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postuler.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/postuler.html.twig">
+      <file leaf-file-name="mesdemandes.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/mesdemandes.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="42" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="444">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MissionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MissionBundle/Controller/MissionController.php">
+      <file leaf-file-name="mesoffres.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/mesoffres.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="81" selection-end-column="5" />
+            <state relative-caret-position="328">
+              <caret line="57" column="88" lean-forward="false" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemandeType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Form/DemandeType.php">
+      <file leaf-file-name="update.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MissionBundle/Resources/views/mission/update.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/update.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="23" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -157,8 +167,8 @@
       <file leaf-file-name="DemandeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Controller/DemandeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="74" column="63" lean-forward="false" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
+            <state relative-caret-position="67">
+              <caret line="71" column="4" lean-forward="false" selection-start-line="71" selection-start-column="4" selection-end-line="88" selection-end-column="5" />
               <folding>
                 <element signature="e#44#77#0#PHP" expanded="true" />
               </folding>
@@ -230,7 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/MissionBundle/Entity/Mission.php" />
         <option value="$PROJECT_DIR$/src/MissionBundle/Repository/MissionRepository.php" />
         <option value="$PROJECT_DIR$/src/ChallengeBundle/Entity/Challenge.php" />
         <option value="$PROJECT_DIR$/src/ChallengeBundle/Repository/QuestionRepository.php" />
@@ -272,15 +281,16 @@
         <option value="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/show.html.twig" />
         <option value="$PROJECT_DIR$/src/OffreBundle/Form/OffreType.php" />
         <option value="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/affiche.html.twig" />
-        <option value="$PROJECT_DIR$/src/OffreBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/postuler.html.twig" />
-        <option value="$PROJECT_DIR$/src/OffreBundle/Controller/OffreController.php" />
         <option value="$PROJECT_DIR$/src/ProjetBundle/Entity/Projet.php" />
-        <option value="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/mesoffres.html.twig" />
         <option value="$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/mesdemandes.html.twig" />
         <option value="$PROJECT_DIR$/src/DemandeBundle/Controller/DemandeController.php" />
         <option value="$PROJECT_DIR$/src/DemandeBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/update.html.twig" />
+        <option value="$PROJECT_DIR$/src/OffreBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/OffreBundle/Controller/OffreController.php" />
+        <option value="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/update.html.twig" />
+        <option value="$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/mesoffres.html.twig" />
       </list>
     </option>
   </component>
@@ -973,11 +983,11 @@
       <recent name="C:\wamp64\www\SmartStartPI-DEV\app\Resources\views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\SmartStartPI-DEV\src\OffreBundle\Resources\views\Offre" />
       <recent name="C:\wamp64\www\SmartStartPI-DEV\src\DemandeBundle\Resources\views\Demande" />
       <recent name="C:\wamp64\www\SmartStartPI-DEV\web\tableau" />
       <recent name="C:\wamp64\www\SmartStartPI-DEV\src\OffreBundle\Entity" />
       <recent name="C:\wamp64\www\SmartStartPI-DEV\src\ProjetBundle\Entity" />
-      <recent name="C:\wamp64\www\SmartStartPI-DEV\src\ProjetBundle" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1082,7 +1092,7 @@
       <workItem from="1550501486334" duration="12775000" />
       <workItem from="1550515597706" duration="45000" />
       <workItem from="1550579165728" duration="41150000" />
-      <workItem from="1550835651695" duration="18632000" />
+      <workItem from="1550835651695" duration="19201000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1550515633542</created>
@@ -1095,7 +1105,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97878000" />
+    <option name="totallyTimeSpent" value="98447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1136,13 +1146,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1378,14 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OffreBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/postuler.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -1402,28 +1397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OffreBundle/Controller/OffreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
-          <folding>
-            <element signature="e#42#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjetBundle/Entity/Projet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="221" column="1" lean-forward="false" selection-start-line="221" selection-start-column="1" selection-end-line="221" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/mesoffres.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="59" column="94" lean-forward="false" selection-start-line="59" selection-start-column="94" selection-end-line="59" selection-end-column="94" />
           <folding />
         </state>
       </provider>
@@ -1460,40 +1437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/mesdemandes.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="60" column="83" lean-forward="false" selection-start-line="60" selection-start-column="83" selection-end-line="60" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MissionBundle/Resources/views/mission/update.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Controller/DemandeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="74" column="63" lean-forward="false" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
-          <folding>
-            <element signature="e#44#77#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Form/DemandeType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1518,13 +1461,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/OffreBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Controller/DemandeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="71" column="4" lean-forward="false" selection-start-line="71" selection-start-column="4" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#44#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OffreBundle/Controller/OffreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
+          <folding>
+            <element signature="e#42#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MissionBundle/Resources/views/mission/update.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/update.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="36" column="65" lean-forward="false" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+        <state relative-caret-position="254">
+          <caret line="23" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/update.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="31" column="72" lean-forward="false" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DemandeBundle/Resources/views/Demande/mesdemandes.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OffreBundle/Resources/views/Offre/mesoffres.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="57" column="88" lean-forward="false" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>

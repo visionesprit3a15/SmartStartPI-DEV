@@ -67,4 +67,23 @@ class OffreController extends Controller
         return $this->redirectToRoute('offre_mesoffres');
     }
 
+    public function updateAction(Request $request,$id)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $offre=$em->getRepository(Offre::class)->find($id);
+        $form=$this->createForm(OffreType::class,$offre);
+
+        $form=$form->handleRequest($request);
+        if ($form->isValid())
+        {
+            $em->flush();
+            return $this->redirectToRoute('offre_mesoffres');
+        }
+
+        return $this->render('@Offre/offre/update.html.twig', array(
+            'form'=>$form->createView(),
+
+        ));
+    }
+
 }
