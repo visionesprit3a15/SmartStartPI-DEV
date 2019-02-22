@@ -56,7 +56,10 @@
                             <td class="cell100 column1">{{ demande.description }}</td>
                             <td class="cell100 column2">{{ demande.prix }}</td>
                             <td class="cell100 column3">{{ demande.idmission.nom}}</td>
-                            <td class="cell100 column4"><a href="{{ path('demande_delete', { 'id':demande.id }) }}">delete</a></td>
+                            <td class="cell100 column4">
+                                <a href="{{ path('demande_delete', { 'id':demande.id }) }}">delete</a>
+                                <a  href="{{ path('demande_update', { 'id': demande.id }) }}" > Update</a>
+                            </td>
                             <td class="cell100 column5">{{ demande.idmission.nom}}</td>
                         </tr>
                         {% endfor %}

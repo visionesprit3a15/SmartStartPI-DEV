@@ -26,3 +26,7 @@ demande_delete:
     path:     /delete/{id}
     defaults: { _controller: "DemandeBundle:Demande:delete" }
 
+demande_update:
+    path:     /update/{id}
+    defaults: { _controller: "DemandeBundle:Demande:update" }
+

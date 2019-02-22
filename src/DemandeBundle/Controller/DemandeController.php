@@ -68,6 +68,26 @@ class DemandeController extends Controller
         ));
     }
 
+
+    public function updateAction(Request $request,$id)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $demande=$em->getRepository(Demande::class)->find($id);
+        $form=$this->createForm(DemandeType::class,$demande);
+
+        $form=$form->handleRequest($request);
+        if ($form->isValid())
+        {
+            $em->flush();
+            return $this->redirectToRoute('demande_mesdemandes');
+        }
+
+        return $this->render('@Demande/demande/update.html.twig', array(
+            'form'=>$form->createView(),
+
+        ));
+    }
+
     public function deleteAction($id)
     {
 
