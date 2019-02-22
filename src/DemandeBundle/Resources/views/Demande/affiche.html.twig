@@ -16,12 +16,14 @@
 
                                     <h4>{{ mission.nom }}</h4> <br>
                                     <ul>
-                                        <li><i class="fa fa-cc-paypal" ></i>&nbsp;Salary {{ mission.Prix }}</li><br>
-                                        <li><i class="fa fa-map-marker"></i>&nbsp;Accomodation {{ mission.hebergement }}</li>
+                                        <li><i class="fa fa-dollar" ></i> Salary {{ mission.Prix }}</li><br>
+                                        <li><i class="fa fa-home"></i>&nbsp;Accomodation {{ mission.hebergement }}</li><br>
+                                        <li><i class="fa fa-car">   Transport {{ mission.transport }}</i></li><br>
+                                        <li><i class="fa fa-calendar"> Duration {{ mission.duree }}</i></li>
                                     </ul>
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-car">   Transport {{ mission.transport }}</i></a></li><br>
-                                        <li><a href="#"><i class="far fa-clock	"> Duration {{ mission.duree }}</i></a></li>
+
+
 
                                     </ul>
                                 </div>
@@ -42,7 +44,7 @@
                         <ul>
                             <li><i class="fas fa-user-friends"></i> Number of people required {{ mission.nombrepersonne }}</li>
                             <li><a href="#"> ,Category {{ mission.categorie.nom }}</a></li>
-                            <li><a href="{{ path('mission_show', { 'id': mission.id }) }}">Show More </a></li>
+
 
                         </ul>
                     </div>

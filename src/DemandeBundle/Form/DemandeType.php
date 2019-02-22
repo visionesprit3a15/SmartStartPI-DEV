@@ -17,8 +17,8 @@ class DemandeType extends AbstractType
     {
         $builder->add('description')
             ->add('prix')
-            ->add('idfreelancer')
-            ->add('Valider',SubmitType::class);
+            ->add('idfreelancer');
+
     }/**
      * {@inheritdoc}
      */
