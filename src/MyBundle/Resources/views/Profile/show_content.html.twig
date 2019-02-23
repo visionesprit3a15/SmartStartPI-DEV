@@ -63,24 +63,24 @@
                         <table>
                             <tbody>
                             <tr>
-                                <td class="td-w25">Full Name</td>
+                                <td class="td-w25">Nom</td>
                                 <td class="td-w10">:</td>
                                 <td class="td-w65">{{ user.nom }} </td>
                             </tr>
                             <tr>
-                                <td class="td-w25">Father's Name</td>
+                                <td class="td-w25">Prenom</td>
                                 <td class="td-w10">:</td>
                                 <td class="td-w65">{{ user.prenom }}</td>
                             </tr>
                             <tr>
                                 <td class="td-w25">Address</td>
                                 <td class="td-w10">:</td>
-                                <td class="td-w65">Street 110-B Kalani Bag, Dewas, M.P. INDIA</td>
+                                <td class="td-w65">{{ user.adresse }}</td>
                             </tr>
                             <tr>
-                                <td class="td-w25">Zip Code</td>
+                                <td class="td-w25">Niveau d'etude</td>
                                 <td class="td-w10">:</td>
-                                <td class="td-w65">12345</td>
+                                <td class="td-w65">{{ user.niveauEtude }}</td>
                             </tr>
                             <tr>
                                 <td class="td-w25">Phone</td>
@@ -93,9 +93,9 @@
                                 <td class="td-w65">{{ user.email }}</td>
                             </tr>
                             <tr>
-                                <td class="td-w25">Website</td>
+                                <td class="td-w25">Specialité</td>
                                 <td class="td-w10">:</td>
-                                <td class="td-w65">http://example.com</td>
+                                <td class="td-w65">{{ user.specialite }}</td>
                             </tr>
 
                             </tbody>
@@ -139,7 +139,7 @@
                                     </div>
                                     <div id="collapseTwentyLeftThree2" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                         <div class="panel-body">
-                                            Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+                                            mmmmmmmmmmmmmmmmmmmmmmm
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                                     </div>
                                     <div id="collapseTwentyLeftThree3" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                         <div class="panel-body">
-                                            Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+                                            {{ user.specialite }}
                                         </div>
                                     </div>
                                 </div>

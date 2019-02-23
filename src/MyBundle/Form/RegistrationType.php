@@ -20,7 +20,8 @@ class RegistrationType extends AbstractType
         $builder->add('prenom');
         $builder->add('telephone');
         $builder->add('adresse');
-        $builder->add('specialite');$builder->add('diplome');
+        $builder->add('specialite');
+        $builder->add('diplome');
         $builder->add('niveauEtude');
     }
     public function getParent()
