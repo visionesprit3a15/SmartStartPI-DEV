@@ -1,7 +1,10 @@
 {% extends 'baseFront.html.twig' %}
+
     {% block content %}
 
-        {% for mission in missions %}
+        {% for mission in missions if mission.nombrepersonne >0 %}
+        <script src="{{ asset('JS/jquery.js') }}"></script>
+
 
             <tr>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
@@ -33,7 +36,9 @@
                                     <ul>
                                         <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
                                         <li><a href="{{ path('demande_show', { 'id': mission.id }) }}">show</a></li>
-                                        <li><a href="{{ path('demande_postuler', { 'id': mission.id }) }}">Apply</a></li>
+
+
+                                        <li><a href="{{ path('demande_postuler', { 'id': mission.id }) }}" class="A" >Apply</a></li>
 
                                     </ul>
                                 </div>
@@ -50,6 +55,31 @@
                     </div>
                 </div>
             </div>
+                <!--
+                 <script>
+
+                    jQuery(document).ready(function(){
+
+                        {% if mission.nombrepersonne == 0 %}
+
+                        $('.A').click(function (e) {
+                            e.preventDefault();
+                        });
+
+
+
+                        {% endif %}
+
+
+                    });
+
+
+
+                </script>
+                -->
+
+
+
 
         {% endfor %}
 

@@ -4,7 +4,6 @@ namespace DemandeBundle\Controller;
 use FOS\UserBundle\Model\UserInterface;
 use DemandeBundle\Entity\Demande;
 use DemandeBundle\Form\DemandeType;
-use MyBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use MissionBundle\Entity\Mission;
 use Symfony\Component\HttpFoundation\Request;
@@ -76,6 +75,7 @@ class DemandeController extends Controller
             if ($form->isValid()) {
                 $demande->setIdmission($mission);
                 $demande->setIdfreelancer($user);
+                $mission->setNombrepersonne($mission->getNombrepersonne()-1);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($demande);
                 $em->flush();
@@ -84,10 +84,17 @@ class DemandeController extends Controller
 
 
 
-        return $this->render('@Demande/demande/postuler.html.twig', array(
-            'form'=>$form->createView()
-        ));
-    }
+
+
+                return $this->render('@Demande/demande/postuler.html.twig', array(
+                    'form' => $form->createView()
+
+
+                ));
+
+        }
+
+
 
 
     public function updateAction(Request $request,$id)
