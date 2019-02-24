@@ -72,7 +72,7 @@ class DemandeController extends Controller
             $demande = new Demande();
             $form = $this->createForm(DemandeType::class, $demande);
             $form = $form->handleRequest($request);
-            if ($form->isValid()) {
+            if ($form->isValid() && $mission->getNombrepersonne()>0) {
                 $demande->setIdmission($mission);
                 $demande->setIdfreelancer($user);
                 $mission->setNombrepersonne($mission->getNombrepersonne()-1);
@@ -81,15 +81,17 @@ class DemandeController extends Controller
                 $em->flush();
                 return $this->redirectToRoute('demande_mesdemandes');
             }
+            else{
+                echo "Vous pouvez pas postuler dans cette mission";
+
+            }
 
 
 
 
 
-                return $this->render('@Demande/demande/postuler.html.twig', array(
+               return $this->render('@Demande/demande/postuler.html.twig', array(
                     'form' => $form->createView()
-
-
                 ));
 
         }

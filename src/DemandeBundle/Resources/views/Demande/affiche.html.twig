@@ -2,7 +2,7 @@
 
     {% block content %}
 
-        {% for mission in missions if mission.nombrepersonne >0 %}
+        {% for mission in missions  %}
         <script src="{{ asset('JS/jquery.js') }}"></script>
 
 
@@ -38,7 +38,9 @@
                                         <li><a href="{{ path('demande_show', { 'id': mission.id }) }}">show</a></li>
 
 
-                                        <li><a href="{{ path('demande_postuler', { 'id': mission.id }) }}" class="A" >Apply</a></li>
+                                        <li> {%  if mission.nombrepersonne==0  %} <a><i class="fa fa-times-circle"></i> </a>{% endif %}
+                                            {%  if mission.nombrepersonne>0  %}  <a href="{{ path('demande_postuler', { 'id': mission.id }) }}" class="A" >Apply</a> {% endif %}
+                                        </li>
 
                                     </ul>
                                 </div>
@@ -75,7 +77,7 @@
 
 
 
-                </script>
+                </>
                 -->
 
 
