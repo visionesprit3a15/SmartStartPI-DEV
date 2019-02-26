@@ -40,9 +40,6 @@ class DemandeController extends Controller
         $prixmin = $request->get('prixmin');
         $prixmax = $request->get('prixmax');
 
-
-
-
         if (isset ($prixmin) ) {
             $em=$this->getDoctrine()->getManager();
             $query=$em->createQuery('SELECT m FROM DemandeBundle:Demande m 
@@ -121,8 +118,6 @@ class DemandeController extends Controller
         }
 
 
-
-
     public function updateAction(Request $request,$id)
     {
         $user = $this->getUser();
@@ -167,7 +162,6 @@ class DemandeController extends Controller
         return $this->redirectToRoute('demande_mesdemandes');
 
     }
-
 
 
 }

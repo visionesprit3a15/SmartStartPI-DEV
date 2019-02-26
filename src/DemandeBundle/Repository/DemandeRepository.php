@@ -15,9 +15,5 @@ class DemandeRepository extends \Doctrine\ORM\EntityRepository
 {
 
 
-    public function myfindall($prixmin,$prixmax){
-        $query=$this->getEntityManager()
-            ->createQuery("select * from DemandeBundle:Demande m where m.prix between '$prixmin' and '$prixmax' ");
-        return $query->getResult();
-    }
+
 }

@@ -24,6 +24,9 @@ class AppKernel extends Kernel
             new OffreBundle\OffreBundle(),
             new DemandeBundle\DemandeBundle(),
             new ProjetBundle\ProjetBundle(),
+            //new blackknight467\StarRatingBundle\StarRatingBundle(),
+
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
