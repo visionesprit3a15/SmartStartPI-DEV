@@ -25,3 +25,11 @@ offre_delete:
 offre_update:
     path:     /update/{id}
     defaults: { _controller: "OffreBundle:Offre:update" }
+
+offre_resultat:
+    path:     /resultat
+    defaults: { _controller: OffreBundle:Offre:Resultat }
+
+offre_recherche:
+    path:     /recherche
+    defaults: { _controller: OffreBundle:Offre:Recherche }

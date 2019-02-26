@@ -96,4 +96,264 @@ class Mission
     private $destransport;
 
 
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rate", type="integer", nullable=false)
+     */
+    private $rate;
+
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set duree
+     *
+     * @param string $duree
+     *
+     * @return Mission
+     */
+    public function setDuree($duree)
+    {
+        $this->duree = $duree;
+
+        return $this;
+    }
+
+    /**
+     * Get duree
+     *
+     * @return string
+     */
+    public function getDuree()
+    {
+        return $this->duree;
+    }
+
+    /**
+     * Set hebergement
+     *
+     * @param string $hebergement
+     *
+     * @return Mission
+     */
+    public function setHebergement($hebergement)
+    {
+        $this->hebergement = $hebergement;
+
+        return $this;
+    }
+
+    /**
+     * Get hebergement
+     *
+     * @return string
+     */
+    public function getHebergement()
+    {
+        return $this->hebergement;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param float $prix
+     *
+     * @return Mission
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return float
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * Set transport
+     *
+     * @param string $transport
+     *
+     * @return Mission
+     */
+    public function setTransport($transport)
+    {
+        $this->transport = $transport;
+
+        return $this;
+    }
+
+    /**
+     * Get transport
+     *
+     * @return string
+     */
+    public function getTransport()
+    {
+        return $this->transport;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Mission
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set nombrepersonne
+     *
+     * @param integer $nombrepersonne
+     *
+     * @return Mission
+     */
+    public function setNombrepersonne($nombrepersonne)
+    {
+        $this->nombrepersonne = $nombrepersonne;
+
+        return $this;
+    }
+
+    /**
+     * Get nombrepersonne
+     *
+     * @return integer
+     */
+    public function getNombrepersonne()
+    {
+        return $this->nombrepersonne;
+    }
+
+    /**
+     * Set deshebergement
+     *
+     * @param string $deshebergement
+     *
+     * @return Mission
+     */
+    public function setDeshebergement($deshebergement)
+    {
+        $this->deshebergement = $deshebergement;
+
+        return $this;
+    }
+
+    /**
+     * Get deshebergement
+     *
+     * @return string
+     */
+    public function getDeshebergement()
+    {
+        return $this->deshebergement;
+    }
+
+    /**
+     * Set destransport
+     *
+     * @param string $destransport
+     *
+     * @return Mission
+     */
+    public function setDestransport($destransport)
+    {
+        $this->destransport = $destransport;
+
+        return $this;
+    }
+
+    /**
+     * Get destransport
+     *
+     * @return string
+     */
+    public function getDestransport()
+    {
+        return $this->destransport;
+    }
+
+    /**
+     * Set identreprise
+     *
+     * @param \MyBundle\Entity\User $identreprise
+     *
+     * @return Mission
+     */
+    public function setIdentreprise(\MyBundle\Entity\User $identreprise = null)
+    {
+        $this->identreprise = $identreprise;
+
+        return $this;
+    }
+
+    /**
+     * Get identreprise
+     *
+     * @return \MyBundle\Entity\User
+     */
+    public function getIdentreprise()
+    {
+        return $this->identreprise;
+    }
+
+    /**
+     * Set categorie
+     *
+     * @param \MissionBundle\Entity\Categorie $categorie
+     *
+     * @return Mission
+     */
+    public function setCategorie(\MissionBundle\Entity\Categorie $categorie = null)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \MissionBundle\Entity\Categorie
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
 }

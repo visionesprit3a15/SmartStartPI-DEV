@@ -355,159 +355,164 @@
       <Position>11</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="94" parent="19" name="idEntreprise">
+    <column id="94" parent="19" name="rate">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="95" parent="19" name="idEntreprise">
       <ColNames>idEntreprise</ColNames>
     </index>
-    <index id="95" parent="19" name="IDX_9067F23C330B72B5">
+    <index id="96" parent="19" name="IDX_9067F23C330B72B5">
       <ColNames>IdCategorie</ColNames>
     </index>
-    <key id="96" parent="19" name="PRIMARY">
+    <key id="97" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="97" parent="19" name="FK_9067F23C8FEDE48A">
+    <foreign-key id="98" parent="19" name="FK_9067F23C8FEDE48A">
       <ColNames>idEntreprise</ColNames>
       <RefSchemaName>smartstartdb</RefSchemaName>
       <RefTableName>fos_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="98" parent="19" name="FK_9067F23C330B72B5">
+    <foreign-key id="99" parent="19" name="FK_9067F23C330B72B5">
       <ColNames>IdCategorie</ColNames>
       <RefSchemaName>smartstartdb</RefSchemaName>
       <RefTableName>categorie</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="99" parent="20" name="id">
+    <column id="100" parent="20" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="100" parent="20" name="description">
+    <column id="101" parent="20" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="101" parent="20" name="prix">
+    <column id="102" parent="20" name="prix">
       <Position>3</Position>
       <DataType>double|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="102" parent="20" name="idProjet">
+    <column id="103" parent="20" name="idProjet">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="103" parent="20" name="idFreelancer">
+    <column id="104" parent="20" name="idFreelancer">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="104" parent="20" name="idFreelancer">
+    <index id="105" parent="20" name="idFreelancer">
       <ColNames>idFreelancer</ColNames>
     </index>
-    <index id="105" parent="20" name="idProjet">
+    <index id="106" parent="20" name="idProjet">
       <ColNames>idProjet</ColNames>
     </index>
-    <key id="106" parent="20" name="PRIMARY">
+    <key id="107" parent="20" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="107" parent="20" name="FK_AF86866F33043433">
+    <foreign-key id="108" parent="20" name="FK_AF86866F33043433">
       <ColNames>idProjet</ColNames>
       <RefSchemaName>smartstartdb</RefSchemaName>
       <RefTableName>projet</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="108" parent="20" name="FK_AF86866FCEDACF02">
+    <foreign-key id="109" parent="20" name="FK_AF86866FCEDACF02">
       <ColNames>idFreelancer</ColNames>
       <RefSchemaName>smartstartdb</RefSchemaName>
       <RefTableName>fos_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="109" parent="21" name="id">
+    <column id="110" parent="21" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="110" parent="21" name="nom">
+    <column id="111" parent="21" name="nom">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="111" parent="21" name="description">
+    <column id="112" parent="21" name="description">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="112" parent="21" name="domaine">
+    <column id="113" parent="21" name="domaine">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="113" parent="21" name="budget">
+    <column id="114" parent="21" name="budget">
       <Position>5</Position>
       <DataType>double|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="114" parent="21" name="delai">
+    <column id="115" parent="21" name="delai">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="115" parent="21" name="idEntreprise">
+    <column id="116" parent="21" name="idEntreprise">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="116" parent="21" name="idEntreprise">
+    <index id="117" parent="21" name="idEntreprise">
       <ColNames>idEntreprise</ColNames>
     </index>
-    <key id="117" parent="21" name="PRIMARY">
+    <key id="118" parent="21" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="118" parent="21" name="FK_50159CA98FEDE48A">
+    <foreign-key id="119" parent="21" name="FK_50159CA98FEDE48A">
       <ColNames>idEntreprise</ColNames>
       <RefSchemaName>smartstartdb</RefSchemaName>
       <RefTableName>fos_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="119" parent="22" name="id">
+    <column id="120" parent="22" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="120" parent="22" name="description">
+    <column id="121" parent="22" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="121" parent="22" name="reponse">
+    <column id="122" parent="22" name="reponse">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="122" parent="22" name="choix">
+    <column id="123" parent="22" name="choix">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="123" parent="22" name="IdChallenge">
+    <column id="124" parent="22" name="IdChallenge">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="124" parent="22" name="IDX_B6F7494EAD7F2DD0">
+    <index id="125" parent="22" name="IDX_B6F7494EAD7F2DD0">
       <ColNames>IdChallenge</ColNames>
     </index>
-    <key id="125" parent="22" name="PRIMARY">
+    <key id="126" parent="22" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="126" parent="22" name="FK_B6F7494EAD7F2DD0">
+    <foreign-key id="127" parent="22" name="FK_B6F7494EAD7F2DD0">
       <ColNames>IdChallenge</ColNames>
       <RefSchemaName>smartstartdb</RefSchemaName>
       <RefTableName>challenge</RefTableName>

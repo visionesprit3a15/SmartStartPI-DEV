@@ -112,4 +112,38 @@ class OffreController extends Controller
         ));
     }
 
+
+    public function RechercheAction(Request $request)
+    {
+        $user = $this->getUser();
+        if (!is_object($user) || !$user instanceof UserInterface) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
+        $prixmin = $request->get('prixmin');
+        $prixmax = $request->get('prixmax');
+        $dom = $request->get('dom');
+
+
+
+
+        if (isset ($prixmin) ) {
+            $em=$this->getDoctrine()->getManager();
+            $query=$em->createQuery('SELECT m FROM OffreBundle:Offre m ,ProjetBundle:Projet p
+                                  WHERE (m.prix BETWEEN :pmin AND :pmax) AND p.domaine = :dom ')
+                ->setParameter('pmin',$prixmin)
+                ->setParameter('pmax',$prixmax)
+                ->setParameter('dom',$dom);
+            ;
+            $demandes=$query->getResult();
+
+
+            return $this->render('@Offre\offre\resultat.html.twig', array(
+                'demandes'=>$demandes
+            ));
+        }
+
+        //$pays=$request->get('pays');//recuperer la valeur envoyer par le formulaire(utilisateur)
+        return $this->render('@Offre\offre\recherche.html.twig', array());
+    }
+
 }

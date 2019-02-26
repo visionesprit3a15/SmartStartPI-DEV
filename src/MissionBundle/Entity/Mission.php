@@ -98,6 +98,16 @@ class Mission
 
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="rate", type="integer", nullable=false)
+     */
+    private $rate;
+
+
+
+
+    /**
      * Get id
      *
      * @return integer
@@ -345,5 +355,29 @@ class Mission
     public function getCategorie()
     {
         return $this->categorie;
+    }
+
+    /**
+     * Set rate
+     *
+     * @param integer $rate
+     *
+     * @return Mission
+     */
+    public function setRate($rate)
+    {
+        $this->rate = $rate;
+
+        return $this;
+    }
+
+    /**
+     * Get rate
+     *
+     * @return integer
+     */
+    public function getRate()
+    {
+        return $this->rate;
     }
 }
