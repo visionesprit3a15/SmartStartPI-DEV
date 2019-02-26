@@ -1,38 +1,118 @@
+{% extends 'baseFront.html.twig' %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
 
-<h1>Mission</h1>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="{{ asset('tableau/images/icons/favicon.ico') }}" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('tableau/vendor/bootstrap/css/bootstrap.min.css') }}" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('tableau/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('tableau/vendor/animate/animate.css') }}" />
 
-<table>
-    <tbody>
-    <tr>
-        <th>Id</th>
-        <td>{{ mission.id }}</td>
-    </tr>
-    <tr>
-        <th>Duree</th>
-        <td>{{ mission.duree }}</td>
-    </tr>
-    <tr>
-        <th>Hebergement</th>
-        <td>{{ mission.hebergement }}</td>
-    </tr>
-    <tr>
-        <th>Prix</th>
-        <td>{{ mission.prix }}</td>
-    </tr>
-    <tr>
-        <th>Transport</th>
-        <td>{{ mission.transport }}</td>
-    </tr>
-    <tr>
-        <th>Nombrepersonne</th>
-        <td>{{ mission.nombrepersonne }}</td>
-    </tr>
-    </tbody>
-</table>
 
-<ul>
-    <li>
-        <a href="{{ path('demande_affiche') }}">Back to the list</a>
-    </li>
-</ul>
+
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('tableau/vendor/select2/select2.min.css') }}" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('tableau/vendor/perfect-scrollbar/perfect-scrollbar.css') }}" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('tableau/css/util.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('tableau/css/main.css') }}" />
+        <!--===============================================================================================-->
+    </head>
+    <body>
+
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver1 m-b-110">
+                    <div class="table100-head">
+                        <table>
+                            <thead>
+                            <tr class="row100 head">
+
+                                <th class="cell100 column1">Nom</th>
+                                <th class="cell100 column2">Prix</th>
+                                <th class="cell100 column3">Transport</th>
+                                <th class="cell100 column4">Hebergement</th>
+                                <th class="cell100 column5">Personne</th>
+
+
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="table100-body js-pscroll">
+                        <table>
+                            <tbody>
+
+                                <tr class="row100 body">
+
+                                    <td class="cell100 column1">{{ mission.nom }}</td>
+                                    <td class="cell100 column2">{{ mission.prix }}</td>
+                                    <td class="cell100 column3">{{ mission.transport}}</td>
+                                    <td class="cell100 column4">{{ mission.hebergement }}</td>
+                                    <td class="cell100 column5">{{ mission.nombrepersonne }}</td>
+
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <div class="jp_form_btn_wrapper">
+                            <ul>
+                                <li><a href="{{ path('demande_affiche') }}"><i class="fa fa-search"></i>Liste des missions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <!--===============================================================================================-->
+    <script src="{{ asset('tableau/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ asset('tableau/vendor/bootstrap/js/popper.js')}}"></script>
+    <script src="{{ asset('tableau/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ asset('tableau/vendor/select2/select2.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ asset('tableau/vendor/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script>
+        $('.js-pscroll').each(function(){
+            var ps = new PerfectScrollbar(this);
+
+            $(window).on('resize', function(){
+                ps.update();
+            })
+        });
+
+
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+    </body>
+    </html>
+{% endblock content %}
+
+
+
+
 

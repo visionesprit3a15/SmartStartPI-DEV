@@ -37,13 +37,11 @@
                             <thead>
                             <tr class="row100 head">
 
-                                <th class="cell100 column1">Nom</th>
+                                <th class="cell100 column1">Description</th>
                                 <th class="cell100 column2">Prix</th>
-                                <th class="cell100 column3">Delai</th>
-                                <th class="cell100 column4">Descriptiont</th>
-                                <th class="cell100 column5">Domaine</th>
-
-
+                                <th class="cell100 column3">Nom</th>
+                                <th class="cell100 column4">Action</th>
+                                <th class="cell100 column5">Categorie</th>
                             </tr>
                             </thead>
                         </table>
@@ -52,18 +50,19 @@
                     <div class="table100-body js-pscroll">
                         <table>
                             <tbody>
+                            {% for demande in demandes %}
+                                <tr class="row100 body">
 
-                            <tr class="row100 body">
-
-                                <td class="cell100 column1">{{ projet.nom }}</td>
-                                <td class="cell100 column2">{{ projet.budget }}</td>
-                                <td class="cell100 column3">{{ projet.delai}}</td>
-                                <td class="cell100 column4">{{ projet.description }}</td>
-                                <td class="cell100 column5">{{ projet.domaine }}</td>
-
-
-                            </tr>
-
+                                    <td class="cell100 column1">{{ demande.description }}</td>
+                                    <td class="cell100 column2">{{ demande.prix }}</td>
+                                    <td class="cell100 column3">{{ demande.idmission.nom}}</td>
+                                    <td class="cell100 column4">
+                                        <a href="{{ path('demande_delete', { 'id':demande.id }) }}">delete</a>
+                                        <a  href="{{ path('demande_update', { 'id': demande.id , 'idm':demande.idmission.id}) }}" > Update</a>
+                                    </td>
+                                    <td class="cell100 column5">{{ demande.idmission.nom}}</td>
+                                </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
 
@@ -71,7 +70,7 @@
                     <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                         <div class="jp_form_btn_wrapper">
                             <ul>
-                                <li><a href="{{ path('offre_affiche') }}"><i class="fa fa-search"></i>Liste des Projets</a></li>
+                                <li><a href="{{ path('demande_mesdemandes') }}"><i class="fa fa-search"></i>Back</a></li>
                             </ul>
                         </div>
                     </div>

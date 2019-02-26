@@ -7,7 +7,7 @@ demande_affiche:
     defaults: { _controller: DemandeBundle:Demande:affiche }
 
 demande_recherche:
-    path:     /Recherche
+    path:     /recherche
     defaults: { _controller: DemandeBundle:Demande:Recherche }
 
 demande_mesdemandes:
@@ -27,6 +27,9 @@ demande_delete:
     defaults: { _controller: "DemandeBundle:Demande:delete" }
 
 demande_update:
-    path:     /update/{id}
+    path:     /update/{id}/{idm}
     defaults: { _controller: "DemandeBundle:Demande:update" }
 
+demande_resultat:
+    path:     /resultat
+    defaults: { _controller: DemandeBundle:Demande:Resultat }

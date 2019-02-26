@@ -8,6 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use MissionBundle\Entity\Mission;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DemandeController extends Controller
 {
@@ -28,12 +31,37 @@ class DemandeController extends Controller
         ));
     }
 
-    public function RechercheAction()
+    public function RechercheAction(Request $request)
     {
-        return $this->render('DemandeBundle:Demande:recherche.html.twig', array(
-            // ...
-        ));
+        $user = $this->getUser();
+        if (!is_object($user) || !$user instanceof UserInterface) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
+        $prixmin = $request->get('prixmin');
+        $prixmax = $request->get('prixmax');
+
+
+
+
+        if (isset ($prixmin) ) {
+            $em=$this->getDoctrine()->getManager();
+            $query=$em->createQuery('SELECT m FROM DemandeBundle:Demande m 
+                                  WHERE m.prix BETWEEN :pmin AND :pmax')
+                ->setParameter('pmin',$prixmin)
+                ->setParameter('pmax',$prixmax);
+            ;
+            $demandes=$query->getResult();
+
+
+            return $this->render('@Demande\demande\resultat.html.twig', array(
+                'demandes'=>$demandes
+            ));
+        }
+
+        //$pays=$request->get('pays');//recuperer la valeur envoyer par le formulaire(utilisateur)
+        return $this->render('@Demande\demande\recherche.html.twig', array());
     }
+
 
     public function showAction(Mission $mission)
     {
@@ -81,14 +109,10 @@ class DemandeController extends Controller
                 $em->flush();
                 return $this->redirectToRoute('demande_mesdemandes');
             }
-            else{
+            else if ($mission->getNombrepersonne()==0){
                 echo "Vous pouvez pas postuler dans cette mission";
 
             }
-
-
-
-
 
                return $this->render('@Demande/demande/postuler.html.twig', array(
                     'form' => $form->createView()
@@ -122,8 +146,9 @@ class DemandeController extends Controller
         ));
     }
 
-    public function deleteAction($id)
+    public function deleteAction($id,Demande $dem)
     {
+
         $user = $this->getUser();
         if (!is_object($user) || !$user instanceof UserInterface) {
             throw new AccessDeniedException('This user does not have access to this section.');
@@ -133,6 +158,12 @@ class DemandeController extends Controller
         $demande=$em->getRepository(Demande::class)->find($id);
         $em->remove($demande);
         $em->flush();
+        $query=$em->createQuery('UPDATE MissionBundle:Mission m 
+                                  SET  m.nombrepersonne = m.nombrepersonne + 1
+                                  WHERE m.id = :idm')->setParameter('idm', $dem->getIdmission());
+        $query->getResult();
+
+
         return $this->redirectToRoute('demande_mesdemandes');
 
     }

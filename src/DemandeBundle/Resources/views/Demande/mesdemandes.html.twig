@@ -57,8 +57,8 @@
                             <td class="cell100 column2">{{ demande.prix }}</td>
                             <td class="cell100 column3">{{ demande.idmission.nom}}</td>
                             <td class="cell100 column4">
-                                <a href="{{ path('demande_delete', { 'id':demande.id }) }}">delete</a>
-                                <a  href="{{ path('demande_update', { 'id': demande.id }) }}" > Update</a>
+                                <a href="{{ path('demande_delete', { 'id':demande.id }) }}">Delete</a>
+                                <a href="{{ path('demande_update', { 'id': demande.id , 'idm':demande.idmission.id}) }}"> Update</a>
                             </td>
                             <td class="cell100 column5">{{ demande.idmission.nom}}</td>
                         </tr>
@@ -66,11 +66,31 @@
                         </tbody>
                     </table>
 
+
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                     <div class="jp_form_btn_wrapper">
                         <ul>
-                            <li><a href="{{ path('demande_affiche') }}"><i class="fa fa-search"></i>Liste des missions</a></li>
+                            <li>
+
+
+                                <a href="{{ path('demande_affiche') }}"><i class="fa fa-arrow-left"></i>Liste des missions</a>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="jp_form_btn_wrapper">
+                        <ul>
+                            <li>
+                                {%  if demandes|length <5  %}
+                                {% else %}
+                                <a href="{{ path('demande_recherche') }}"><i class="fa fa-search"></i>Recherche mission</a>
+                                {% endif %}
+                            </li>
+
                         </ul>
                     </div>
                 </div>
